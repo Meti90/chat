@@ -1,0 +1,298 @@
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./node_modules/tailwindcss/theme.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- <script src="scripts/script.js"></script> -->
+    <!-- <div id="before_side_bar">
+        <div id="side_bar">
+            <span onclick="close()">بستن</span>
+        </div>
+    </div> -->
+    <div class="header2">
+        <div onclick="closeee()" class="div-close-search">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="close-search">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </div>
+
+
+        <input type="text" name="" id="inp-search" placeholder="چه چیزی میخواهید ؟">
+
+
+    </div>
+    <div class="header">
+
+        <div id="menu-right-mobile">
+            <div class="bgc-menu">
+                <div class="back-back-menu" onclick="closee()"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="back-menu">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                    </svg></div>
+
+            </div>
+            <div class="profile-menu">
+                <div class="back-image-menu">
+                    <img src="images/Profile.png" class="profile-image-menu">
+                </div>
+            </div>
+            <div class="all-menu">
+                <div class="text-menu">
+                    <span>کاربر مهمان</span>
+                    <p id="Password">12341234</p>
+                </div>
+                <p class="pr"></p>
+                <div class="item-menu-i">
+                    <p>داشبورد</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#6c6f7d" class="sizess-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                    </svg>
+                </div>
+                <div class="item-menu-i">
+                    <p>ویرایش پروفایل</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#6c6f7d" class="ssize-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                    </svg>
+                </div>
+                <div class="item-menu-i">
+                    <p>اعلان ها</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#6c6f7d" class="size-6ss">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
+                    </svg>
+                </div>
+                <div class="item-menu-i">
+                    <p>سبد خرید </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#6c6f7d" class="sisze-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                </div>
+                <p class="pr"></p>
+                <div onclick="Logout()" class="item-menu-r">
+                    <p> خروج از اکانت </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#c33e3e" class="sizes-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                    </svg>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="search" onclick="opennn()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+        </div>
+
+        <div class="icon">
+            <img src="images/icon (1).png" alt="" width="55px" height="50px">
+        </div>
+        <!-- <span onclick="open()">open</span> -->
+
+
+        <div class="menu-header" onclick="openn()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>
+        </div>
+
+    </div>
+    <div class="menu-foot">
+        <a href="index.html">
+            <div class="menu">
+                <div class="item-menu">
+                    <div class="icon-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                        </svg>
+                    </div>
+                    <p>صفحه اصلی</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="menu">
+                <div class="item-menu">
+                    <div class="icon-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+                        </svg>
+                    </div>
+                    <p>محصولات</p>
+                </div>
+            </div>
+        </a>
+        <a href="login.html">
+            <div class="menu">
+                <div class="item-menu">
+                    <div class="icon-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </div>
+                    <p>ورود/ثبت نام</p>
+                </div>
+            </div>
+        </a>
+        <a href="shopping-cart.html">
+            <div class="menu">
+                <div class="item-menu">
+                    <div class="icon-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                    </div>
+                    <p>سبدخرید</p>
+                    <!-- <p class="number-shop">0</p> -->
+                </div>
+            </div>
+        </a>
+    </div>
+    </div>
+
+        <main style="height: 30rem;">
+            <div class="dashboard">
+                <div class="img-dashboard">
+                    <img src="images/Profile.png" alt="" width="90px" height="90px">
+                </div>
+            </div>
+        </main>
+        <div class="footer">
+            <div class="div-icon-footer">
+                <img src="images/icon (1).png" alt="" width="55px" height="50px">
+            </div>
+            <div class="links-footer">
+                <div class="item-links-footer">
+                    <div class="div-top-links">
+                        <h3 class="title-links-footer">تماس با ما</h3>
+                        <ul>
+                            <a href="">
+                                <li class="li-footer">پشتیبانی</li>
+                            </a>
+                            <a href="">
+                                <li class="li-footer">مدیر عامل</li>
+                            </a>
+                            <a href="">
+                                <li class="li-footer">مدیر کل</li>
+                            </a>
+                            <a href="">
+                                <li class="li-footer">چت انلاین</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item-links-footer">
+                    <div class="div-top-links">
+                        <h3 class="title-links-footer">قوانین سایت</h3>
+                        <ul>
+                            <a href="">
+                                <li class="li-footer">حقوقی </li>
+                            </a>
+                            <a href="">
+                                <li class="li-footer">سفارشی</li>
+                            </a>
+                            <a href="">
+                                <li class="li-footer">مادی</li>
+                            </a>
+                            <a href="">
+                                <li class="li-footer">سایت</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item-links-footer">
+                    <div class="div-top-links">
+                        <h3 class="title-links-footer">لینک های مفید</h3>
+                        <ul>
+                            <a href="">
+                                <li class="li-footer">سایت مجلات</li>
+                            </a>
+                            <a href="">
+                                <li class="li-footer">رتبه ها</li>
+                            </a>
+                            <a href="">
+                                <li class="li-footer">آزمون ها</li>
+                            </a>
+                            <a href="">
+                                <li class="li-footer">اپلیکیشن </li>
+                            </a>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="social-buttons">
+
+                <a href="#"><svg class="social facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="#7b7b6f" width="24" height="24">
+                        <path
+                            d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24"
+                        fill="#7b7b6f" class="social-2">
+                        <path fill-rule="evenodd" clip-rule="evenodd" class="social1"
+                            d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                            fill="#7b7b6f" />
+                        <path class="social1"
+                            d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                            fill="#7b7b6f" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" class="social1"
+                            d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                            fill="#7b7b6f" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px"
+                        fill="#7b7b6f" class="social link">
+                        <path
+                            d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100px" height="100px"
+                        class="social-ts" fill="#7b7b6f">
+                        <path
+                            d="M32,10c12.15,0,22,9.85,22,22s-9.85,22-22,22s-22-9.85-22-22S19.85,10,32,10z M39.589,40.968 c0.404-1.241,2.301-13.615,2.534-16.054c0.071-0.738-0.163-1.229-0.619-1.449c-0.553-0.265-1.371-0.133-2.322,0.21 c-1.303,0.47-17.958,7.541-18.92,7.951c-0.912,0.388-1.775,0.81-1.775,1.423c0,0.431,0.256,0.673,0.96,0.924 c0.732,0.261,2.577,0.82,3.668,1.121c1.05,0.29,2.243,0.038,2.913-0.378c0.709-0.441,8.901-5.921,9.488-6.402 c0.587-0.48,1.056,0.135,0.576,0.616c-0.48,0.48-6.102,5.937-6.844,6.693c-0.901,0.917-0.262,1.868,0.343,2.249 c0.689,0.435,5.649,3.761,6.396,4.295c0.747,0.534,1.504,0.776,2.198,0.776C38.879,42.942,39.244,42.028,39.589,40.968z" />
+                    </svg></a>
+
+
+            </div>
+            <div class="end-footer">
+                <p>تمامی حقوق این سایت محفوظ می باشد</p>
+            </div>
+        </div>
+        <script src="scripts/script.js"></script>
+</body>
+
+</html>

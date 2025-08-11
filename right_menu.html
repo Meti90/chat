@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منوی کشویی</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #fff;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000;
+            font-size: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-button:hover {
+            transform: scale(1.1);
+        }
+
+        .menu-button i {
+            font-size: 24px;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 33%;
+            height: 100%;
+            background-color: #f8f9fa;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .menu.open {
+            right: 0;
+        }
+
+        .menu .close-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .menu .close-button:hover {
+            transform: scale(1.1);
+        }
+
+        .menu .close-button i {
+            font-size: 24px;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin: 15px 0;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="content">
+        <h1>صفحه اصلی</h1>
+        <p>این یک متن تستی است برای نمایش محتوای صفحه اصلی.</p>
+        <button class="menu-button" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <div class="menu" id="sideMenu">
+        <button class="close-button" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <h2>منو</h2>
+        <ul>
+            <li><a href="#">صفحه اصلی</a></li>
+            <li><a href="#">درباره ما</a></li>
+            <li><a href="#">خدمات</a></li>
+            <li><a href="#">تماس با ما</a></li>
+        </ul>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <script>
+        function openMenu() {
+            document.getElementById('sideMenu').classList.add('open');
+            document.getElementById('overlay').classList.add('active');
+        }
+
+        function closeMenu() {
+            document.getElementById('sideMenu').classList.remove('open');
+            document.getElementById('overlay').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>اسلایدر کتاب با دکمه داخل</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f2f2f2;
+      direction: rtl;
+      margin: 0;
+      padding: 50px 20px;
+    }
+
+    .book-slider-container {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+      overflow: hidden;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .book-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .book-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .book {
+      min-width: 140px;
+      height: 200px;
+      flex-shrink: 0;
+      text-align: center;
+      border-radius: 10px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .book:hover {
+      transform: scale(1.05);
+    }
+
+    /* رنگ‌های متنوع */
+    .book:nth-child(6n+1) { background: #ff6b6b; }
+    .book:nth-child(6n+2) { background: #ffa502; }
+    .book:nth-child(6n+3) { background: #1e90ff; }
+    .book:nth-child(6n+4) { background: #2ed573; }
+    .book:nth-child(6n+5) { background: #a29bfe; }
+    .book:nth-child(6n+6) { background: #ff4757; }
+
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.9);
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      z-index: 10;
+      transition: background 0.3s;
+    }
+
+    .scroll-btn:hover {
+      background: #eeeeee;
+    }
+
+    .scroll-btn.left {
+      right: 10px;
+    }
+
+    .scroll-btn.right {
+      left: 10px;
+    }
+
+    .scroll-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="book-slider-container">
+    <!-- دکمه‌ها داخل اسلایدر در دو طرف -->
+    <button class="scroll-btn left" id="scrollLeft">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <button class="scroll-btn right" id="scrollRight">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <div class="book-slider" id="bookSlider">
+      <!-- آیتم‌های کتاب -->
+      <div class="book">کتاب 1</div>
+      <div class="book">کتاب 2</div>
+      <div class="book">کتاب 3</div>
+      <div class="book">کتاب 4</div>
+      <div class="book">کتاب 5</div>
+      <div class="book">کتاب 6</div>
+      <div class="book">کتاب 7</div>
+      <div class="book">کتاب 8</div>
+      <div class="book">کتاب 9</div>
+      <div class="book">کتاب 10</div>
+      <div class="book">کتاب 11</div>
+      <div class="book">کتاب 12</div>
+    </div>
+  </div>
+
+  <script>
+    const bookSlider = document.getElementById("bookSlider");
+    const scrollLeft = document.getElementById("scrollLeft");
+    const scrollRight = document.getElementById("scrollRight");
+  
+    scrollLeft.addEventListener("click", () => {
+      // این یعنی دکمه چپ = اسکرول به جلو
+      bookSlider.scrollBy({ left: 150, behavior: "smooth" });
+    });
+  
+    scrollRight.addEventListener("click", () => {
+      // دکمه راست = اسکرول به عقب
+      bookSlider.scrollBy({ left: -150, behavior: "smooth" });
+    });
+  </script>
+  
+
+</body>
+</html>

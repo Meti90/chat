@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        body {
+            background-color: rgb(246, 246, 246);
+            padding: 80px 12px 64px 12px;
+
+        }
+
+        .beetwin {
+            width: 100%;
+            height: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="icon-login">
+            <img src="images/icon (1).png" alt="" width="65px" height="65px">
+        </div>
+        <div class="container-login">
+            <form action="">
+                <span>ورود / ثبت نام</span>
+                <p>شماره موبایل یا ایمیل خود را وارد کنید</p>
+                <hr class="pr-r">
+                </hr>
+                <div class="container-login-input">
+                    <p> ایمیل</p><input type="email" class="input-number">
+                </div>
+                <div class="beetwin"></div>
+                <div class="container-login-input">
+                    <p> رمز عبور</p><input type="text" class="input-number">
+                </div>
+                <p id="demo"></p>
+                <div class="checkbox-login">
+                    <p> ورود/ثبت‌نام شما به معنای پذیرش
+                        <a href="#">قوانین</a>
+                        میباشد
+                    </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 256 256" class="text-blue-600">
+                        <path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path>
+                        <path
+                            d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z">
+                        </path>
+                    </svg>
+
+                </div>
+
+
+                <div class="submit-login" onclick="CheckUser()">
+                    ادامه
+                </div>
+            </form>
+        </div>
+    </main>
+    <script>
+        if (localStorage.getItem("Login") == "Yes") {
+            alert("شما قبلا ثبت نام کردید !");
+            window.location.assign("index.html");
+        }
+        function CheckUser() {
+            var inp = document.getElementsByClassName("input-number")[1].value;
+            var inpe = document.getElementsByClassName("input-number")[0].value;
+            if (inpe == '') {
+                alert("ایمیل را وارد کنید !");
+            } else {
+                if (inp == "") {
+                    alert("رمزعبور را وارد کنید !");
+                } else {
+                    if (inp.length <= 7) {
+                        alert("رمز عبور باید 8 حرف باشد !")
+                    } else {
+                        alert("با موفقیت وارد شدید !ّ")
+                        localStorage.setItem("Email", inpe);
+                        localStorage.setItem("Login", "Yes");
+                        localStorage.setItem("Password", inp);
+                        window.location.assign("index.html");
+                    }
+                }
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
